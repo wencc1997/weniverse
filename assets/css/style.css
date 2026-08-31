@@ -286,21 +286,36 @@ img {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 1;
+    aspect-ratio: 4 / 5;
     cursor: pointer;
     border-radius: 4px;
     transition: var(--transition);
+    background: #f0efec;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Default focus near the top so headers/faces/upper composition survive the crop */
+    object-position: center top;
     transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
     transform: scale(1.05);
+}
+
+/* Per-category crop focus so the most important area stays in frame */
+.gallery-item[data-category="jewelry"] img,
+.gallery-item[data-category="leather"] img,
+.gallery-item[data-category="publications"] img {
+    object-position: center center;
+}
+
+.gallery-item[data-category="photography"] img,
+.gallery-item[data-category="ai-art"] img {
+    object-position: center 30%;
 }
 
 .gallery-overlay {
