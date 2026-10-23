@@ -36,7 +36,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <img src="assets/images/logo.png" alt="Weniverse" class="hero-logo">
+            <div class="hero-reveal" id="heroReveal">
+                <img src="assets/images/hero-base.png" alt="Weniverse" class="hero-reveal-base">
+                <img src="assets/images/hero-reveal.png" alt="" aria-hidden="true" class="hero-reveal-top" id="heroRevealTop">
+            </div>
             <h1 class="hero-title">Congchen Wen</h1>
             <p class="hero-subtitle">Fashion Designer &middot; Visual Artist &middot; Jewelry Designer</p>
             <a href="#portfolio" class="hero-cta">View My Work</a>
@@ -76,302 +79,70 @@
     <section class="section portfolio" id="portfolio">
         <div class="container">
             <h2 class="section-title">Portfolio</h2>
-            <p class="section-description">A selection of my work across various disciplines and media.</p>
-            
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="fashion">Fashion Design</button>
-                <button class="filter-btn" data-filter="jewelry">Jewelry Design</button>
-                <button class="filter-btn" data-filter="paintings">Paintings</button>
-                <button class="filter-btn" data-filter="photography">Photography</button>
-                <button class="filter-btn" data-filter="illuminations">Illuminations</button>
-                <button class="filter-btn" data-filter="leather">Leather Works</button>
-                <button class="filter-btn" data-filter="ai-art">AI-Generated Art</button>
-                <button class="filter-btn" data-filter="publications">Publications</button>
+            <p class="section-description">A selection of my work across various disciplines and media. Click a theme to view the full collection.</p>
+
+            <!-- Theme navigation: jumps straight into a theme's collection -->
+            <nav class="theme-nav" id="themeNav" aria-label="Portfolio themes">
+                <button class="theme-nav-link" data-category="fashion">Fashion Design</button>
+                <button class="theme-nav-link" data-category="jewelry">Jewelry Design</button>
+                <button class="theme-nav-link" data-category="paintings">Paintings</button>
+                <button class="theme-nav-link" data-category="photography">Photography</button>
+                <button class="theme-nav-link" data-category="illuminations">Illuminations</button>
+                <button class="theme-nav-link" data-category="leather">Leather Works</button>
+                <button class="theme-nav-link" data-category="ai-art">AI-Generated Artwork</button>
+                <button class="theme-nav-link" data-category="publications">Publications</button>
+            </nav>
+
+            <!-- Category Cover Grid (3 x 3 = 9 cover images) -->
+            <div class="category-grid" id="categoryGrid">
+                <div class="category-card" data-category="fashion">
+                    <img src="Art Works/Fashion Design/The Gaze/微信图片_202504141155163.jpg" alt="Fashion Design" loading="lazy">
+                    <div class="category-label"><span>Fashion Design</span></div>
+                </div>
+                <div class="category-card" data-category="fashion">
+                    <img src="Art Works/Fashion Design/Violet Cloud/微信图片_202504231622531.png" alt="Fashion Design" loading="lazy">
+                    <div class="category-label"><span>Fashion Design</span></div>
+                </div>
+                <div class="category-card" data-category="illuminations">
+                    <img src="Art Works/Illuminations/e59bbee78987_20250327142750-3.jpg" alt="Illuminations" loading="lazy">
+                    <div class="category-label"><span>Illuminations</span></div>
+                </div>
+                <div class="category-card" data-category="jewelry">
+                    <img src="Art Works/Jewelry Design/a6db3a124f0f50c0cc4ad2e0230beab.jpg" alt="Jewelry Design" loading="lazy">
+                    <div class="category-label"><span>Jewelry Design</span></div>
+                </div>
+                <div class="category-card" data-category="leather">
+                    <img src="Art Works/Leather Works/e5beaee4bfa1e59bbee78987_20250423163029.png" alt="Leather Works" loading="lazy">
+                    <div class="category-label"><span>Leather Works</span></div>
+                </div>
+                <div class="category-card" data-category="paintings">
+                    <img src="Art Works/Paintings/图片_202503261604193.jpg" alt="Paintings" loading="lazy">
+                    <div class="category-label"><span>Paintings</span></div>
+                </div>
+                <div class="category-card" data-category="photography">
+                    <img src="Art Works/Photography/36f34ba96d6811d68d1a3ba763c3cfce.png" alt="Photography" loading="lazy">
+                    <div class="category-label"><span>Photography</span></div>
+                </div>
+                <div class="category-card" data-category="publications">
+                    <img src="Art Works/Publications/img_3948-4.jpg" alt="Publications" loading="lazy">
+                    <div class="category-label"><span>Publications</span></div>
+                </div>
+                <div class="category-card" data-category="ai-art">
+                    <img src="Art Works/AI-Generated Artwork/20250423_131100000_iOS.jpg" alt="AI-Generated Artwork" loading="lazy">
+                    <div class="category-label"><span>AI-Generated Artwork</span></div>
+                </div>
             </div>
 
-            <!-- Gallery Grid -->
-            <div class="gallery-grid" id="galleryGrid">
-                <!-- Fashion Design -->
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423161201.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423161243.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423161329.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423161350.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423162153.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="fashion">
-                    <img src="Art Works/Fashion Design/微信图片_20250423162253.png" alt="Fashion Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Fashion Design</span>
-                    </div>
-                </div>
+        </div>
 
-                <!-- Jewelry Design -->
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_4651.JPG" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
+        <!-- Category Modal: shows all photos within a theme -->
+        <div class="category-modal" id="categoryModal">
+            <div class="category-modal-inner">
+                <div class="category-modal-header">
+                    <h3 class="category-modal-title" id="categoryModalTitle"></h3>
+                    <button class="category-modal-close" id="categoryModalClose" aria-label="Close">&times;</button>
                 </div>
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_4663.JPG" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_4673.JPG" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_8296.jpg" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_8311.jpg" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="jewelry">
-                    <img src="Art Works/Jewelry Design/IMG_8355.jpg" alt="Jewelry Design" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Jewelry Design</span>
-                    </div>
-                </div>
-
-                <!-- Paintings -->
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/微信图片_20250221154439.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/微信图片_20250221161031.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/图片_20250326163946.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/图片_20250326163947.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/图片_20250326163949.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="paintings">
-                    <img src="Art Works/Paintings/图片_20250327161959.jpg" alt="Painting" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Paintings</span>
-                    </div>
-                </div>
-
-                <!-- Photography -->
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_0246.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_3395.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_3397.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_3621.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_4135.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="photography">
-                    <img src="Art Works/Photography/img_4138.jpg" alt="Photography" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Photography</span>
-                    </div>
-                </div>
-
-                <!-- Illuminations -->
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327142727-1.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327142747-1.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327142748-1.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327154626-2.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327154635-1.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="illuminations">
-                    <img src="Art Works/Illuminations/e59bbee78987_20250327165609.jpg" alt="Illumination" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Illuminations</span>
-                    </div>
-                </div>
-
-                <!-- Leather Works -->
-                <div class="gallery-item" data-category="leather">
-                    <img src="Art Works/Leather Works/img_9205-1.jpeg" alt="Leather Work" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Leather Works</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="leather">
-                    <img src="Art Works/Leather Works/img_9227.jpeg" alt="Leather Work" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Leather Works</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="leather">
-                    <img src="Art Works/Leather Works/2018-10-16-04.30.41-2.jpg" alt="Leather Work" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Leather Works</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="leather">
-                    <img src="Art Works/Leather Works/2018-10-16-04.30.42-1.jpg" alt="Leather Work" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Leather Works</span>
-                    </div>
-                </div>
-
-                <!-- AI-Generated Artwork -->
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_the_model_is_wearing_a_glowing_dress_with_an_irregul_08f1e06a-f710-4b83-8d22-1798e7600dd8.png" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_the_model_is_wearing_a_glowing_dress_with_an_irregul_60f5a508-16fe-42dd-8f91-5b453a8fd415-1.png" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_An_interior_of_an_old_house_in_Sweden_painted_in_the_1c2903b9-c844-450a-96fb-692a14ea8424.png" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_An_interior_of_an_old_house_in_Sweden_painted_in_the_307bc3bd-3d89-49db-87a9-7eece5ba91df.png" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_Ultra-realistic_photo_of_a_person_sitting_on_a_white_b20e568e-519f-4e77-a42d-f9fffb06bc83.png" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="ai-art">
-                    <img src="Art Works/AI-Generated Artwork/mhaoldrako_four_fashion_sketches_on_one_page_featuring_exaggera_e376dd16-02fa-4375-9c35-a122536bfaea.webp" alt="AI-Generated Art" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>AI-Generated Art</span>
-                    </div>
-                </div>
-
-                <!-- Publications -->
-                <div class="gallery-item" data-category="publications">
-                    <img src="Art Works/Publications/img_3948-4.jpg" alt="Publication" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Publications</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="publications">
-                    <img src="Art Works/Publications/img_3949-3.jpg" alt="Publication" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Publications</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="publications">
-                    <img src="Art Works/Publications/img_3950-2.jpg" alt="Publication" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Publications</span>
-                    </div>
-                </div>
-                <div class="gallery-item" data-category="publications">
-                    <img src="Art Works/Publications/img_3951-1.jpg" alt="Publication" loading="lazy">
-                    <div class="gallery-overlay">
-                        <span>Publications</span>
-                    </div>
-                </div>
+                <div class="category-modal-grid" id="categoryModalGrid"></div>
             </div>
         </div>
     </section>
